@@ -17,10 +17,12 @@ public class Empdetails {
             System.out.println("3: Search");
             System.out.println("4: Update");
             System.out.println("5: Delete");
+            System.out.println("---------------------------");
 
             select=scanner.nextInt();
             switch (select){
                 case 1:
+                    System.out.println("---------------------------");
                     System.out.println("Enter the Employee Id");
                     idt=scanner.nextInt();
                     System.out.println("Enter Employee Name");
@@ -28,6 +30,8 @@ public class Empdetails {
                     System.out.println("Enter the Employee Salary");
                     salary=scanner.nextFloat();
                     emp.add(new Employee(idt,name,salary));
+                    System.out.println("Details Inserted Succesfully !!!");
+                    System.out.println("---------------------------");
                     break;
                 case 2:
                     System.out.println("Employee ID  | Employee Name  | Employee Salary ");
@@ -35,6 +39,8 @@ public class Empdetails {
                     {
                         System.out.println(t);
                     }
+                    System.out.println("Details Displayed Succesfully !!!");
+                    System.out.println("---------------------------");
                     break;
 
                 case 3:
@@ -45,11 +51,14 @@ public class Empdetails {
                     for(int i=0;i<= emp.size();i++) {
 
 
-                        if (sid==emp.get(i).getEmpid()) {
-                            System.out.println( emp.get(i));
+                        if (sid == emp.get(i).getEmpid()) {
+                            System.out.println(emp.get(i));
                             break;
                         }
-                   }
+                    }
+                        System.out.println("Details Searched Succsfully !!!");
+                        System.out.println("---------------------------");
+
                     break;
                 case 4:
                     System.out.println("Enter the Employee id ");
@@ -70,6 +79,8 @@ public class Empdetails {
                         }
                         j++;
                     }
+                    System.out.println("Details Updated Succsfully !!!");
+                    System.out.println("---------------------------");
 
                     break;
                 case 5:
@@ -77,8 +88,9 @@ public class Empdetails {
                     sip=scanner.nextInt();
                     for(int  i=0;i<=emp.size();i++) {
 
-                        if (idt==emp.get(i).getEmpid()) {
+                        if (sip==emp.get(i).getEmpid()) {
                             emp.remove(i);
+                            System.out.println("Deleted Successfully ");
                             break;
                         }
 
